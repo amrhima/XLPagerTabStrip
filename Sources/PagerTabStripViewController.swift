@@ -65,6 +65,12 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
     open var pageWidth: CGFloat {
         return containerView.bounds.width
     }
+    
+    open func setViewControllers(viewControllers:[UIViewController])
+    {
+        self.viewControllers = viewControllers
+        self.reloadViewControllers()
+    }
 
     open var scrollPercentage: CGFloat {
         if swipeDirection != .right {
